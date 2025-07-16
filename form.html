@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form</h1>
+
+    <!--
+       action - url to the server 
+       method 
+        - GET 
+        -POST
+
+        Fields : 
+          Textbox - plain text 
+            - text, email, password
+          Text area 
+          Dropdown - Multipole . select any one or mulitpl
+          Radio button - Any one 
+          Checkbow - Multipe values - any one / multiple
+          File input 
+
+        Server -
+         key:value 
+         name
+
+      GET   http://127.0.0.1:5500/form.html
+
+      Query String
+           ?uname=admin&
+           password=12345678
+
+      POST
+
+      When file upload
+        method="POST"
+        enctype="multipart/form-data"
+
+    -->
+
+    <fieldset>
+      <legend>Registration Form</legend>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <table cellspacing="15">
+          <tr>
+            <td><label for="uname">Username</label></td>
+            <td><input id="uname" type="text" placeholder="Enter your username" name="uname" required minlength="3" maxlength="8" value="Courseinn" readonly /></td>
+          </tr>
+
+          <tr>
+            <td><label for="pwd">Password</label></td>
+            <td><input id="pwd" type="password" placeholder="Enter your password" name="password" required /></td>
+          </tr>
+        </table>
+
+        <br />
+        <br />
+
+        <label for="msg">Message</label>
+        <textarea name="message" id="msg" rows="5" cols="25">Hello World</textarea>
+
+        <br />
+        <br />
+
+        <select name="city" id="" required>
+          <option value="">Please select city</option>
+          <option value="100">Chennai</option>
+          <option value="101" selected>Madurai</option>
+          <option value="102">Trichy</option>
+        </select>
+
+        <br />
+        <br />
+
+        <fieldset>
+          <legend>Select Gender</legend>
+          <input type="radio" name="gender" value="1" />
+          Male
+          <input type="radio" name="gender" value="2" />
+          FeMale
+        </fieldset>
+
+        <br />
+        <br />
+        <label for="">Select Languages</label>
+
+        <input type="checkbox" name="lang" value="tamil" />
+        Tamil
+        <input type="checkbox" name="lang" value="eng" />
+        English
+        <input type="checkbox" name="lang" value="mal" />
+        Malayalam
+
+        <br />
+        <br />
+
+        <input type="file" name="resume" />
+
+        <br />
+        <br />
+
+        <input type="hidden" name="userid" value="1000" />
+
+        <input type="submit" value="Login" />
+      </form>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  border: 2px solid red;
+}
+
+.container > * {
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: green;
+}
+
+h2 {
+  color: green;
+}
+
+p {
+  color: green;
+}
+
+nav {
+  border: 2px solid blue;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: red;
+}
+nav ul li a:hover {
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.container h2 {
+  color: red;
+}
+.btn-primary {
+  padding: 10px 20px;
+  color: red;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  color: blue;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert, .alert-success, .alert-danger, .alert-primary {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+}
+
+.alert-primary {
+  background-color: blue;
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: red;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: green;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

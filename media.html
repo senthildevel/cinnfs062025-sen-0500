@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Media - Audio</h1>
+
+    <!-- <audio src="/media/sample.mp3" controls autoplay loop muted></audio> -->
+
+    <!--
+        .aac - Firefoex, chrome -X
+
+        .mp3 
+
+        File MIME Type 
+        .txt - text/plain
+
+        MIME type 
+
+        Firefox
+        Chrome
+        Edge
+        Safari 
+        Opera 
+
+    Fallback
+
+    SOng1 - aac
+    aac - mp3   
+
+    Animated iumage - GIF 
+
+
+    -->
+
+    <audio controls autoplay loop muted>
+      <source src="/media/sample.aac" type="audio/aac" />
+      <source src="/media/sample.mp3" type="audio/mpeg" />
+      Your browser doesnt support the audio element
+    </audio>
+
+    <!-- <video src="/media/sample.mp4" controls loop muted width="80%" poster="/media/video_thumbnail.jpg"></video> -->
+
+    <!-- <video src="/media/drive.mp4" width="350" autoplay loop></video> -->
+
+    <video controls>
+      <source src="/media/sample.avi" type="video/x-msvideo" />
+      <source src="/media/sample.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>

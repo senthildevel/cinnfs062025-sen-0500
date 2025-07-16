@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        border: 2px solid red;
+      }
+      p {
+        color: blue;
+      }
+
+      /* Parent CHild */
+      /* .box p {
+        color: green;
+      } */
+
+      /* Direcct child */
+
+      .box > p {
+        color: green;
+      }
+
+      /* .tech > li {
+        border: 2px solid red;
+      } */
+
+      /* Immeadiate next element / sibling */
+      /*  h3 + p {
+        color: red;
+        font-size: 18px;
+        font-weight: bold;
+      }
+        */
+
+      /* .heading ~ p {
+        border: 2px solid red;
+      } */
+
+      .heading + .para {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Courseinn Academy</h1>
+
+      <h2 class="heading">Section 1</h2>
+
+      <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet mollitia qui adipisci quibusdam possimus excepturi ea libero ipsam! Velit iste eveniet quas distinctio consequuntur id, facere vitae vel corrupti qui.</p>
+
+      <h3>This is h3</h3>
+
+      <img src="/images/logo.png" alt="" />
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptatibus iure esse dignissimos sunt? Quisquam ipsam reiciendis ut similique, eaque a, ducimus amet sint, laborum nesciunt alias veritatis tenetur nihil.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptatibus iure esse dignissimos sunt? Quisquam ipsam reiciendis ut similique, eaque a, ducimus amet sint, laborum nesciunt alias veritatis tenetur nihil.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptatibus iure esse dignissimos sunt? Quisquam ipsam reiciendis ut similique, eaque a, ducimus amet sint, laborum nesciunt alias veritatis tenetur nihil.</p>
+
+      <ul class="tech">
+        <li>
+          HTML
+          <ul>
+            <li>HEading</li>
+            <li>Paragarpah</li>
+            <li>Image</li>
+          </ul>
+        </li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>React</li>
+      </ul>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+      <h3>This is h3</h3>
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptatibus iure esse dignissimos sunt? Quisquam ipsam reiciendis ut similique, eaque a, ducimus amet sint, laborum nesciunt alias veritatis tenetur nihil.</p>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+      <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+        <div class="sub-box">
+          <p>Sub boxLorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+
+          <p>Sub box Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum atque enim cumque rem natus commodi saepe praesentium voluptatibus, ad, aut dolorum culpa, magnam odio. Suscipit officia atque molestiae corrupti.</p>
+        </div>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut laudantium impedit rerum atque magni, fugit consequatur perspiciatis necessitatibus provident corporis, minima saepe perferendis ad earum illum modi ullam delectus totam.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut laudantium impedit rerum atque magni, fugit consequatur perspiciatis necessitatibus provident corporis, minima saepe perferendis ad earum illum modi ullam delectus totam.</p>
+      </div>
+    </div>
+  </body>
+</html>

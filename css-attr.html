@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /*
+         selector[attribute_name]
+         
+        selector[attribute_name= "Attr Value"]{
+        }
+
+
+        */
+
+      /* Exact Match */
+      /*p[class="para"] {
+        border: 2px solid red;
+      }
+        */
+
+      /* Contianing the word */
+      /* p[class~="para"] {
+        border: 2px solid red;
+      } */
+
+      /* Begining */
+      /*  p[class^="para"] {
+        border: 2px solid red;
+      }
+        */
+
+      /* Endnig*/
+
+      /* p[class$="para"] {
+        border: 2px solid red;
+      } */
+
+      /* ANy word */
+
+      /* p[class*="para"] {
+        border: 2px solid red;
+      } */
+
+      /* Hyphenated */
+      /* p[class|="para"] {
+        border: 2px solid red;
+      } */
+
+      a[title] {
+        border: 2px solid red;
+        color: grey;
+      }
+
+      input[type="text"] {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS - Attribute Selector</h1>
+
+    <fieldset>
+      <legend>Registration Form</legend>
+      <form action="">
+        <div>
+          <input class="field" type="text" />
+        </div>
+        <div>
+          <input class="field" type="text" />
+        </div>
+        <div>
+          <input type="password" />
+        </div>
+        <div>
+          <input type="email" />
+        </div>
+        <div>
+          <input type="text" />
+        </div>
+        <div>
+          <input type="text" />
+        </div>
+      </form>
+    </fieldset>
+
+    <div class="section">
+      <fieldset>
+        <legend>Social media</legend>
+        <a href="#">Google</a>
+        <br />
+        <a href="https://instagram.com" title="Instagram">Instagram com</a>
+        <br />
+        <a href="https://youtube.in">Youtube in</a>
+        <br />
+        <a href="http://facebook.com" title="facebook">Facebook com</a>
+        <br />
+        <a href="https://linkedin.in">Linkedin</a>
+        <br />
+        <a href="#" title="twitter">Twitter</a>
+      </fieldset>
+    </div>
+
+    <!-- <p class="mypara">
+        <strong>mypara</strong> Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Assumenda pariatur corrupti eligendi, enim
+        voluptatibus voluptas perferendis iste praesentium. Id, ratione.
+     </p>
+
+     <p>Hello World</p>
+
+      <p class="content para">
+        <strong>content para</strong> Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Assumenda pariatur corrupti eligendi, enim
+        voluptatibus voluptas perferendis iste praesentium. Id, ratione.
+      </p>
+
+      <p class="para">
+        <strong>para</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+        pariatur corrupti eligendi, enim voluptatibus voluptas perferendis iste
+        praesentium. Id, ratione.
+      </p>
+    </fieldset>
+
+    <p class="para-content">
+      <strong>para-content</strong>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      pariatur corrupti eligendi, enim voluptatibus voluptas perferendis iste
+      praesentium. Id, ratione.
+    </p>
+
+    <p class="content-para">
+      <strong>content-para</strong>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      pariatur corrupti eligendi, enim voluptatibus voluptas perferendis iste
+      praesentium. Id, ratione.
+    </p>
+
+    <p>Hello World</p>
+  
+
+    <p class="PARA">
+      <strong>PARA</strong>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      pariatur corrupti eligendi, enim voluptatibus voluptas perferendis iste
+      praesentium. Id, ratione.
+    </p>
+
+    <p class="para">
+      <strong>para</strong>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      pariatur corrupti eligendi, enim voluptatibus voluptas perferendis iste
+      praesentium. Id, ratione.
+    </p> -->
+  </body>
+</html>

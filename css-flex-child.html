@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: 20px;
+      }
+
+      .parent {
+        /* height: 450px; */
+        border: 2px solid blue;
+        /* padding: 10px; */
+
+        display: flex;
+        /* flex-direction: row; */
+        flex-flow: row wrap;
+        /* align-items: center; */
+        /* justify-content: center; */
+
+        /* gap: 10px; */
+
+        column-gap: 10px;
+        row-gap: 20px;
+      }
+
+      .child {
+        /* width: 250px; */
+        padding: 50px;
+        /* height: 150px; */
+        border: 2px solid red;
+
+        /* flex: 1;  */
+        /* 1 1 auto */
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+        /* flex-basis: 250px; */
+
+        /* flex-basis: auto; */
+
+        /* flex: 0 0 200px; */
+
+        /* flex-basis: calc(50% - 10px); */
+        /* flex-basis: 33%; */
+
+        /* margin-right: 20px; */
+
+        flex-basis: 200px;
+      }
+
+      .child:nth-child(1) {
+        /* order: 2; */
+      }
+      .child:nth-child(2) {
+        /* order: 1; */
+
+        /* align-self: flex-start; */
+        /* flex-grow: 3; */
+        /* flex-shrink: 3; */
+        margin-left: auto;
+      }
+      .child:nth-child(3) {
+        /* order: -1; */
+        /* align-self: flex-end; */
+        /* flex-grow: 2; */
+        /* flex-shrink: 2; */
+        /* margin-right: 0; */
+        margin-right: auto;
+      }
+      .child:nth-child(4) {
+        /* order: 3; */
+        /* align-self: stretch; */
+        /* flex-grow: 1; */
+      }
+
+      /* order 2 1 4 3   -1 0 1  */
+
+      .items_mc {
+        border: 2px solid green;
+        margin: 20px;
+      }
+      .items_mc span {
+        border: 2px solid red;
+        border-radius: 10px;
+        background-color: lightblue;
+        padding: 10px 20px;
+      }
+
+      .items {
+        display: inline-flex;
+      }
+
+      .items1 {
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items_mc items">
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+      </div>
+
+      <div class="items_mc items1">
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+      </div>
+
+      <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <!-- <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">4</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">4</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">4</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">4</div>
+        <div class="child">3</div>
+        <div class="child">4</div> -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .link {
+        color: blue;
+      }
+
+      .link:hover {
+        color: red;
+      }
+
+      .link:active {
+        color: green;
+      }
+
+      ul li:nth-child(2n) {
+        border: 2px solid red;
+      }
+
+      .links a:last-child {
+        border: 2px solid red;
+      }
+
+      .box p:nth-last-of-type(3) {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo-class Selector:</h1>
+
+    <div class="box">
+      <h2>Section Heading</h2>
+      <p>1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+      <p>2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+      <p>3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+      <h2>Section Heading</h2>
+      <p>4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+      <p>5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+      <p>6 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, nemo!</p>
+    </div>
+
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Orange</li>
+    </ul>
+
+    <div class="links">
+      <a href="https://www.evernote.com/" class="link">Click Here</a>
+
+      <a href="https://google.com" class="link">Google</a>
+
+      <a href="https://courseinn.com" class="link">Courseinn</a>
+    </div>
+  </body>
+</html>

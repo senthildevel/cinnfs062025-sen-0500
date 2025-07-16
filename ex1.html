@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model Showcase Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* General Resets and Box Sizing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* This is crucial for the Box Model understanding */
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto; /* Centers the container */
+        padding: 0 20px; /* Internal padding for content within the container */
+      }
+
+      /* Header Section */
+      header {
+        background-color: #f4f4f4; /* Light grey */
+        padding: 20px 0; /* Top and bottom padding */
+        border-bottom: 1px solid #ddd; /* Bottom border */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #007bff; /* Blue */
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-left: 25px; /* Margin between navigation items */
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 400;
+        padding: 5px 0; /* Padding for click area */
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #007bff;
+      }
+
+      /* Hero Banner Section */
+      .hero-banner {
+        /* Using picsum.photos for a random large image */
+        background: url("https://picsum.photos/seed/banner/1920/600") no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0; /* Top and bottom padding for the banner content */
+        margin-bottom: 40px; /* Margin below the banner */
+        position: relative; /* Needed for overlay */
+      }
+
+      .hero-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        z-index: 1;
+      }
+
+      .hero-banner .container {
+        position: relative;
+        z-index: 2; /* Bring content above the overlay */
+      }
+
+      .banner-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px; /* Margin below the title */
+      }
+
+      .banner-content p {
+        font-size: 18px;
+        margin-bottom: 30px; /* Margin below the description */
+      }
+
+      .cta-button {
+        background-color: #28a745; /* Green */
+        color: #fff;
+        padding: 15px 30px; /* Padding inside the button */
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #218838;
+      }
+
+      /* Content Section */
+      .content-section {
+        background-color: #e9ecef; /* Light grey-blue */
+        padding: 60px 0; /* Top and bottom padding */
+        margin-bottom: 40px; /* Margin below the section */
+      }
+
+      .content-section h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 25px; /* Margin below the title */
+      }
+
+      .content-section p {
+        text-align: justify;
+        line-height: 1.8;
+        max-width: 800px; /* Max width for readability */
+        margin: 0 auto; /* Center the paragraph */
+        padding: 0 15px; /* Padding on the sides of the paragraph */
+      }
+
+      /* Product Showcase Section */
+      .product-showcase {
+        background-color: #fff; /* White */
+        padding: 60px 0; /* Top and bottom padding */
+        margin-bottom: 40px; /* Margin below the section */
+      }
+
+      .product-showcase h3 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 40px; /* Margin below the title */
+      }
+
+      .product-grid {
+        display: flex;
+        flex-wrap: wrap; /* Allows cards to wrap to the next line */
+        justify-content: center; /* Centers the cards when not filling the row */
+        gap: 30px; /* Space between product cards */
+      }
+
+      .product-card {
+        background-color: #f8f9fa; /* Very light grey */
+        border: 1px solid #ced4da; /* Visible border */
+        border-radius: 8px;
+        padding: 20px; /* Internal padding for content */
+        margin: 15px; /* External margin around each card */
+        width: calc(25% - 30px); /* Adjust width for 4 cards per row, accounting for gap/margin */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribute space vertically */
+        min-width: 250px; /* Ensure cards don't get too small */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 15px; /* Margin below image */
+        border: 1px solid #dee2e6; /* Border for image */
+        padding: 5px; /* Padding for image */
+      }
+
+      .product-card h4 {
+        font-size: 20px;
+        margin-bottom: 10px; /* Margin below product title */
+      }
+
+      .product-card p {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 15px; /* Margin below description */
+        flex-grow: 1; /* Allows description to take up available space */
+      }
+
+      .product-card .price {
+        font-size: 22px;
+        font-weight: 700;
+        color: #dc3545; /* Red */
+        margin-bottom: 15px; /* Margin below price */
+      }
+
+      .product-card .add-to-cart {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px; /* Padding inside the button */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .product-card .add-to-cart:hover {
+        background-color: #0056b3;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #343a40; /* Dark grey */
+        color: #fff;
+        text-align: center;
+        padding: 25px 0; /* Top and bottom padding */
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .product-card {
+          width: calc(33.33% - 30px); /* 3 cards per row on medium screens */
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav ul {
+          margin-top: 15px;
+        }
+
+        nav ul li {
+          margin: 0 10px;
+        }
+
+        .hero-banner {
+          padding: 80px 0;
+        }
+
+        .banner-content h1 {
+          font-size: 38px;
+        }
+
+        .banner-content p {
+          font-size: 16px;
+        }
+
+        .content-section {
+          padding: 40px 0;
+        }
+
+        .content-section h2 {
+          font-size: 30px;
+        }
+
+        .product-card {
+          width: calc(50% - 30px); /* 2 cards per row on small screens */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .product-card {
+          width: calc(100% - 30px); /* 1 card per row on extra small screens */
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .logo {
+          font-size: 20px;
+        }
+
+        nav ul li {
+          margin: 0 5px;
+        }
+
+        .hero-banner {
+          padding: 60px 0;
+        }
+
+        .banner-content h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Your Logo</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-banner">
+      <div class="container">
+        <div class="banner-content">
+          <h1>Discover Our Amazing Products</h1>
+          <p>Explore a wide range of high-quality items designed to enhance your life.</p>
+          <button class="cta-button">Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Understanding the Box Model</h2>
+        <p>In CSS, every element is treated as a rectangular box. The Box Model describes how these boxes are rendered on the page, including their content, padding, border, and margin. Understanding this model is crucial for effective layout and spacing in web design. Padding is the space between the content and the border. The border is a line around the padding and content. Margin is the space outside the border, separating the element from other elements.</p>
+      </div>
+    </section>
+
+    <section class="product-showcase">
+      <div class="container">
+        <h3>Featured Products</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1015/300/200" alt="Product 1" />
+            <h4>Product Title 1</h4>
+            <p>A short description of product 1.</p>
+            <span class="price">$29.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1025/300/200" alt="Product 2" />
+            <h4>Product Title 2</h4>
+            <p>A short description of product 2.</p>
+            <span class="price">$49.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1035/300/200" alt="Product 3" />
+            <h4>Product Title 3</h4>
+            <p>A short description of product 3.</p>
+            <span class="price">$19.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Box Model Showcase. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

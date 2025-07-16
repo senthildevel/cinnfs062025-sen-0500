@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        border: 1px solid red;
+        margin-inline: auto;
+        padding-inline: 20px;
+
+        /* margin-top: 60px; */
+      }
+
+      .main-parent {
+        border: 2px solid blue;
+        padding: 20px;
+      }
+
+      .boxes {
+        border: 2px solid red;
+        position: relative;
+        max-width: 650px;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .box:nth-child(1) {
+        background-color: red;
+      }
+      .box:nth-child(2) {
+        background-color: blue;
+        /* position: relative; */
+
+        /* position: absolute; */
+        /* left: -150px; */
+        /* bottom: 100%; */
+        /* right: 0; */
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        /* bottom: 50px;
+        right: 100px; */
+        /* left: 50%; */
+
+        /* top: 100px; */
+        /*left: 100px; */
+      }
+      .box:nth-child(3) {
+        background-color: yellow;
+        width: 250px;
+
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+      }
+      .box:nth-child(4) {
+        background-color: green;
+      }
+
+      .head-menu {
+        background-color: lightcoral;
+        padding: 25px;
+        /* position: fixed; */
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      .sticky-parent {
+        height: 600px;
+        border: 5px solid blue;
+      }
+
+      .sticky-sec {
+        border: 2px solid green;
+        padding: 20px;
+        position: sticky;
+        /* relative and fixed */
+        top: 70px;
+      }
+
+      /* Normal Docuemnt FLow 
+
+       static  - wont workk z-index,  top right bottom left
+
+       relative
+       absolute - checks whther parents position is relative (contianing element)
+       fixed
+       sticky - relative & fixed 
+
+       top right bottom left
+      
+      
+      */
+    </style>
+  </head>
+  <body>
+    <div class="head-menu">Header Menu</div>
+    <div class="container">
+      <h1>Courseinn Academy</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit reiciendis dicta recusandae, consequuntur, commodi labore aliquam exercitationem maiores illo distinctio ipsam. Tempore minima soluta distinctio laboriosam nihil nesciunt ullam quibusdam, illo veritatis voluptates voluptatum, non culpa dignissimos optio nemo eaque corrupti quam quae reprehenderit magni error. Tenetur, quis consequatur laborum esse saepe recusandae magnam quibusdam molestias placeat laboriosam quas veritatis ipsam repellendus ullam sit! Modi illum magnam rem, autem voluptatem commodi dicta non harum. Est quaerat molestiae amet voluptates minima aperiam, nam dignissimos hic commodi facilis aliquid magnam atque, tempora minus sint aliquam quas, incidunt necessitatibus quasi. Reiciendis nam soluta consequuntur cumque perferendis molestias commodi tempore nobis impedit culpa, eum, nemo reprehenderit vero, magnam quas dolores ex sit voluptas! Consequuntur, et! Cum velit impedit suscipit quia nam, id cupiditate corrupti delectus voluptates doloribus dolorem. Cumque tempore pariatur vel quo. Placeat, velit? Voluptatem repellendus autem ad sed ex debitis in praesentium deleniti dolorem? Quia, quae, vitae ipsam, ipsa rem quas dolore deserunt autem illo ab cupiditate veniam. Aperiam, eos assumenda culpa quae similique veniam suscipit. Accusantium, non culpa quam dolorem temporibus reprehenderit fuga ipsa aut vitae, corporis blanditiis alias expedita saepe dolorum quis necessitatibus asperiores? Harum et minima reprehenderit incidunt dolores.</p>
+      <div class="main-parent">
+        <h1>CSS Position</h1>
+        <h2>Courseinn Academy</h2>
+
+        <div class="boxes">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+        </div>
+      </div>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores consequuntur sint cum dignissimos quas hic ab obcaecati facilis nesciunt, praesentium ducimus doloribus nisi esse libero exercitationem. Vero amet iste vel nostrum adipisci at dolor dicta quia, consequatur alias aspernatur necessitatibus maxime reiciendis velit, sed porro a libero saepe incidunt earum voluptates atque. Culpa ipsum quia quidem. Consectetur facilis harum quos iure, optio ratione enim aspernatur, exercitationem itaque, dicta officiis minus molestiae labore? In saepe temporibus numquam adipisci exercitationem dicta nisi, autem modi sequi atque aspernatur voluptates inventore similique voluptas est quisquam fuga expedita, minus facere! Sequi, nulla reiciendis, natus aperiam animi tenetur vitae voluptate culpa perspiciatis, dolorum ex doloribus obcaecati voluptatum esse in accusantium totam exercitationem. Non, qui. Veniam, atque autem error rem natus ipsam deserunt, asperiores odio enim expedita laudantium esse rerum ad eum quisquam ducimus at dicta perspiciatis. Voluptatibus atque voluptate, doloremque aspernatur nihil odio iusto quae consequatur, veniam, hic minima optio ipsam repellat aliquid? Atque quae, exercitationem voluptatem aspernatur tempore deleniti temporibus explicabo dolore aliquam vel cupiditate repudiandae repellendus, nam blanditiis molestiae placeat, quibusdam modi? Reiciendis aperiam corrupti et voluptatem ducimus porro, pariatur incidunt nihil ut nesciunt. Veritatis quo, vel quidem quia quibusdam facere mollitia iste.</p>
+    </div>
+
+    <div class="sticky-parent">
+      <div class="sticky-sec">
+        <h3>Hello, This is Stickcy</h3>
+      </div>
+    </div>
+
+    <div style="height: 2800px"></div>
+  </body>
+</html>

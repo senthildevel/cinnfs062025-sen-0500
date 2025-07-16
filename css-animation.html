@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* background-color: aquamarine; */
+      }
+
+      .container {
+        max-width: 1200px;
+        border: 1px solid red;
+        margin-inline: auto;
+        padding-inline: 20px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: lightcoral;
+
+        animation-name: myanimation1;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .ball {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        animation: bounce 1s ease infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-100px);
+        }
+      }
+
+      @keyframes myanimation {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(250px);
+        }
+      }
+
+      @keyframes myanimation1 {
+        0% {
+          transform: translateX(0, 0);
+        }
+
+        25% {
+          transform: translate(250px, 0);
+        }
+        50% {
+          transform: translate(250px, 50px);
+        }
+        75% {
+          transform: translate(0, 50px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes rotateanim {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border-radius: 50%;
+        border: 5px solid #000;
+        border-top-color: red;
+        animation: rotateanim 2s linear infinite;
+      }
+
+      .marquee {
+        width: 100%;
+      }
+      .marquee p {
+        display: inline-block;
+        /* padding-left: 100%; */
+        animation: scroll-left 10s linear infinite;
+      }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Animation</h1>
+
+      <div class="marquee">
+        <p>This is a modern marquee effect using CSS!</p>
+      </div>
+
+      <!-- <marquee behavior="" direction="">Hello, welcome to Courseinn Academy</marquee> -->
+
+      <!-- <button>Contact Us</button> -->
+
+      <div class="spinner"></div>
+    </div>
+  </body>
+</html>

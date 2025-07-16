@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        border: 1px solid red;
+        margin-inline: auto;
+        padding-inline: 20px;
+
+        /* margin-top: 60px; */
+      }
+      /*
+        1 Counter initialize - counter-reset  - Name the counter
+        2 Increment the counter - counter-increment
+        3 Display the counter  - counter(<countername))     
+
+        */
+
+      .items {
+        counter-reset: mycounter;
+      }
+
+      .items h3 {
+        counter-increment: mycounter;
+        margin-bottom: 20px;
+      }
+      .items h3::before {
+        content: "(" counter(mycounter) ")";
+        color: red;
+        margin-right: 5px;
+      }
+
+      .subsection-item {
+        margin-left: 20px;
+      }
+
+      .section {
+        counter-reset: main-counter;
+      }
+      .section-item {
+        counter-increment: main-counter;
+        counter-reset: sub-counter;
+      }
+
+      .section-item::before {
+        content: "Section " counter(main-counter) ":";
+        color: blue;
+      }
+
+      .subsection-item {
+        counter-increment: sub-counter;
+      }
+
+      .subsection-item::before {
+        content: "Subsection " counter(main-counter) "." counter(sub-counter);
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Counter</h1>
+
+      <!-- <div class="items">
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quas!</h3>
+      </div> -->
+
+      <div class="section">
+        <div class="section-item">
+          <div class="subsection-item"></div>
+          <div class="subsection-item"></div>
+        </div>
+        <div class="section-item">
+          <div class="subsection-item">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, quae libero sed maxime officia soluta molestias laboriosam excepturi nostrum ipsam reiciendis inventore magni quod? Consectetur quo unde facilis quae autem.</p>
+          </div>
+          <div class="subsection-item"></div>
+          <div class="subsection-item"></div>
+        </div>
+        <div class="section-item">
+          <div class="subsection-item"></div>
+          <div class="subsection-item"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

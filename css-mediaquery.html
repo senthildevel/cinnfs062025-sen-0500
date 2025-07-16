@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style-base.css" />
+    <!-- <link rel="stylesheet" href="/css/style-tab.css" media="(min-width:577px) and (max-width:768px) " />
+    <link rel="stylesheet" href="/css/style-mob.css" media="(max-width:576px)" /> -->
+
+    <style>
+      /*  body {
+          background-color: lightcoral;
+        }
+
+        h1 {
+          font-size: 42px;
+          text-decoration: underline;
+          color: blue;
+        }
+          */
+
+      /*
+        min-width : from 568px
+        max-width : to : 768px
+
+        Breakpoints :
+        Compuer / Laptop  - min-width: 992px
+        Tablet    min-width: 768px
+        MObile - max-width:576px
+
+        @media <media-type> and (<Media condition>){
+
+
+      }
+
+      max-width: 576p: 0 - 576
+
+      order
+
+      Mobile First approach
+      Desktop first approach
+
+
+
+        */
+
+      /*  @media screen and (max-width: 576px) {
+          body {
+            background-color: lightgreen;
+          }
+
+          h1 {
+            color: red;
+            font-size: 24px;
+          }
+        }
+
+        */
+
+      /*@media (min-width: 576px) {
+          body {
+            background-color: lightgoldenrodyellow;
+          }
+        }
+
+        @media (min-width: 768px) {
+          body {
+            background-color: lightseagreen;
+          }
+        }
+
+        @media (min-width: 992px) {
+          body {
+            background-color: lightskyblue;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          body {
+            background-color: lightslategrey;
+          }
+        }
+          */
+
+      /* @media (min-width: 576px) and (max-width: 768px) { */
+
+      @media (width >= 576px) and (width <= 768px) {
+        /* @media (576px <= width <= 768px) { */
+        body {
+          background-color: green;
+        }
+      }
+      @media (min-width: 992px) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        body {
+          background-color: lightgreen;
+        }
+
+        h1 {
+          color: red;
+          font-size: 24px;
+        }
+      }
+
+      @media (orientation: landscape) {
+        h1::before {
+          content: "Landscape -- ";
+        }
+      }
+
+      @media (resolution: 2dpx) {
+        .logo {
+          background-image: url("logo@2x.png");
+          background-size: contain;
+        }
+      }
+
+      @media print {
+        body {
+          color: red;
+          background: white;
+        }
+
+        .hide_print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS - Media Query</h1>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laboriosam officiis architecto. Quaerat sint, provident, veritatis qui nisi voluptate aperiam nostrum tempore ea eveniet suscipit dicta a nesciunt ad vero!</p>
+
+      <img class="logo hide_print" src="/images/logo.png" alt="" />
+
+      <p class="hide_print">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum earum error porro aperiam recusandae sequi incidunt obcaecati consectetur aliquam officia a suscipit minus, quo accusantium et sed eum iste nemo ipsam repellendus at repudiandae pariatur quod. Ab voluptatem ratione consectetur deleniti facere! Eligendi consequuntur corporis mollitia nisi quos eos obcaecati quia facere recusandae modi repellat fugit asperiores ratione, magni placeat illum ab dolor sunt itaque tempora temporibus laboriosam, debitis aspernatur ducimus. Molestiae non, error et dolorem consectetur laboriosam expedita odio vitae nemo soluta laborum impedit corrupti quisquam iure magnam sunt eaque animi nesciunt ex modi corporis iusto excepturi voluptatem.</p>
+    </div>
+  </body>
+</html>

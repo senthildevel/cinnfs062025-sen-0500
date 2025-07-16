@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model Showcase Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+      /* General Resets and Box Sizing */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Still crucial for the Box Model understanding */
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Central container for content */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto; /* Centers the block-level container */
+        padding: 0 20px; /* Internal padding to prevent content from touching screen edges */
+        overflow: hidden; /* Clears any potential floats if they were used, good practice */
+      }
+
+      /* Header Section */
+      header {
+        background-color: #f4f4f4; /* Light grey */
+        padding: 20px 0; /* Top and bottom padding for the header section */
+        border-bottom: 1px solid #ddd; /* Bottom border */
+        text-align: center; /* Center child inline-block elements */
+      }
+
+      header .container {
+        /* For older layout, we might need to make children inline-block */
+        /* We'll use text-align on the parent and display: inline-block on children */
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #007bff; /* Blue */
+        display: inline-block; /* Treat logo as an inline block */
+        vertical-align: middle; /* Align with middle of navigation */
+        margin-right: 50px; /* Manual spacing between logo and nav */
+        /* This spacing will need careful adjustment for different screen sizes without flex */
+      }
+
+      nav {
+        display: inline-block; /* Treat nav as an inline block */
+        vertical-align: middle; /* Align with middle of logo */
+      }
+
+      nav ul {
+        list-style: none;
+        /* text-align: left; Not needed here as li's are inline-block */
+      }
+
+      nav ul li {
+        display: inline-block; /* Makes list items appear horizontally */
+        margin-left: 25px; /* Margin between navigation items */
+        /* Note: There will be a small gap due to whitespace between inline-block elements */
+      }
+
+      nav ul li:first-child {
+        margin-left: 0; /* No left margin for the first item */
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 400;
+        padding: 5px 0; /* Padding for click area */
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #007bff;
+      }
+
+      /* Hero Banner Section */
+      .hero-banner {
+        background: url("https://picsum.photos/seed/banner/1920/600") no-repeat center center/cover;
+        color: #fff;
+        text-align: center; /* Centers inline/inline-block content */
+        padding: 100px 0; /* Top and bottom padding for the banner content */
+        margin-bottom: 40px; /* Margin below the banner */
+        /* Cannot use position for overlay, so we will skip the semi-transparent overlay */
+      }
+
+      .banner-content {
+        /* For vertical centering, we're simply relying on the padding of .hero-banner */
+        /* The content itself will be centered horizontally by text-align: center on .hero-banner */
+        display: inline-block; /* To allow auto width and horizontal centering within parent's text-align */
+        max-width: 800px; /* Constrain width for readability */
+      }
+
+      .banner-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px; /* Margin below the title */
+      }
+
+      .banner-content p {
+        font-size: 18px;
+        margin-bottom: 30px; /* Margin below the description */
+      }
+
+      .cta-button {
+        background-color: #28a745; /* Green */
+        color: #fff;
+        padding: 15px 30px; /* Padding inside the button */
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block; /* Buttons are inline by default, but inline-block gives more control */
+      }
+
+      .cta-button:hover {
+        background-color: #218838;
+      }
+
+      /* Content Section */
+      .content-section {
+        background-color: #e9ecef; /* Light grey-blue */
+        padding: 60px 0; /* Top and bottom padding */
+        margin-bottom: 40px; /* Margin below the section */
+        text-align: center; /* Center h2 and p using text-align */
+      }
+
+      .content-section h2 {
+        font-size: 36px;
+        margin-bottom: 25px; /* Margin below the title */
+      }
+
+      .content-section p {
+        text-align: justify;
+        line-height: 1.8;
+        max-width: 800px; /* Max width for readability */
+        margin: 0 auto; /* Centers the block-level paragraph */
+        padding: 0 15px; /* Padding on the sides of the paragraph */
+        display: block; /* Ensure it behaves as a block */
+      }
+
+      /* New Features Section */
+      .features-section {
+        background-color: #d1ecf1; /* Light blue */
+        padding: 60px 0;
+        margin-bottom: 40px;
+        text-align: center; /* Center the feature grid */
+      }
+
+      .features-section h3 {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+
+      .feature-grid {
+        font-size: 0; /* Collapse whitespace between inline-block elements */
+        margin: 0 auto; /* Center the grid container itself */
+        max-width: 900px; /* Max width for features to prevent stretching */
+      }
+
+      .feature-item {
+        display: inline-block; /* Aligned horizontally */
+        vertical-align: top; /* Align to top if heights vary */
+        width: 22%; /* Approx. 4 items per row, adjust for margin */
+        margin: 15px 1.5%; /* Margin around each item, simple percentage for spacing */
+        border: 1px solid #a8dadc; /* Border around the feature item */
+        padding: 20px; /* Padding inside the feature item */
+        background-color: #e0f2f7; /* Slightly different background */
+        border-radius: 8px;
+        text-align: center; /* Center icon and text inside item */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 40px;
+        color: #007bff;
+        margin-bottom: 15px; /* Space below icon */
+        display: block; /* Ensure icon takes its own line for margin-bottom */
+        font-size: initial; /* Reset font-size if parent has font-size: 0 */
+      }
+
+      .feature-text {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        font-size: initial; /* Reset font-size */
+      }
+
+      /* Product Showcase Section */
+      .product-showcase {
+        background-color: #fff; /* White */
+        padding: 60px 0; /* Top and bottom padding */
+        margin-bottom: 40px; /* Margin below the section */
+        text-align: center; /* Crucial for centering the product cards */
+      }
+
+      .product-showcase h3 {
+        font-size: 32px;
+        margin-bottom: 40px; /* Margin below the title */
+      }
+
+      .product-grid {
+        font-size: 0; /* Collapse whitespace between inline-block elements */
+        margin: 0 auto; /* Center the grid container itself */
+        max-width: 1200px; /* Match container width */
+      }
+
+      .product-card {
+        background-color: #f8f9fa; /* Very light grey */
+        border: 1px solid #ced4da; /* Visible border */
+        border-radius: 8px;
+        padding: 20px; /* Internal padding for content */
+        margin: 15px; /* External margin around each card */
+        display: inline-block;
+        vertical-align: top; /* Ensures cards align from the top */
+        width: 280px; /* Fixed width for demonstration */
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .product-card img {
+        max-width: 100%; /* Ensures image scales within card */
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 15px; /* Margin below image */
+        border: 1px solid #dee2e6; /* Border for image */
+        padding: 5px; /* Padding for image */
+        display: block; /* Make image a block to control its margin-bottom */
+        margin-left: auto; /* Center image within card if smaller than width */
+        margin-right: auto;
+      }
+
+      .product-card h4 {
+        font-size: 20px;
+        margin-bottom: 10px; /* Margin below product title */
+      }
+
+      .product-card p {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 15px; /* Margin below description */
+      }
+
+      .product-card .price {
+        font-size: 22px;
+        font-weight: 700;
+        color: #dc3545; /* Red */
+        margin-bottom: 15px; /* Margin below price */
+        display: block; /* Ensure it takes full width for margin-bottom to work */
+      }
+
+      .product-card .add-to-cart {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px; /* Padding inside the button */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        display: inline-block; /* To allow button to respect padding and horizontal alignment */
+      }
+
+      .product-card .add-to-cart:hover {
+        background-color: #0056b3;
+      }
+
+      /* New Tags Section */
+      .tags-section {
+        background-color: #f0f8ff; /* Very light blue */
+        padding: 60px 0;
+        margin-bottom: 40px;
+        text-align: center; /* Center the tag list */
+      }
+
+      .tags-section h3 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .tag-list {
+        font-size: 0; /* Collapse whitespace between inline-block tags */
+        margin: 0 auto;
+        max-width: 1000px; /* Constrain width of tag container */
+      }
+
+      .tag {
+        display: inline-block; /* Make tags align horizontally */
+        background-color: #e2f0fb; /* Light background for tags */
+        border: 1px solid #a7d9f7; /* Border for tags */
+        border-radius: 20px; /* Rounded corners for tag look */
+        padding: 8px 15px; /* Internal padding for text */
+        margin: 8px; /* External margin to separate tags */
+        font-size: 14px; /* Reset font size for tag text */
+        color: #007bff; /* Blue text for tags */
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .tag:hover {
+        background-color: #d0e8fa;
+        border-color: #7abeff;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #343a40; /* Dark grey */
+        color: #fff;
+        text-align: center;
+        padding: 25px 0; /* Top and bottom padding */
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+
+      /* Responsive Adjustments (More challenging without flexbox) */
+      /* We'll use more basic media queries and change widths or display */
+
+      @media (max-width: 992px) {
+        .product-card {
+          width: 300px; /* Adjust card width for 3 per row (approx) */
+          margin: 15px; /* Keep margin consistent */
+        }
+        .feature-item {
+          width: 45%; /* 2 items per row on medium screens */
+          margin: 15px 2.5%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header .logo,
+        header nav {
+          display: block; /* Stack logo and nav vertically */
+          margin: 0 auto 15px auto; /* Center and add space */
+          text-align: center; /* Center text within logo/nav */
+        }
+
+        header nav ul li {
+          margin: 0 10px; /* Reduce spacing for smaller screens */
+        }
+
+        .hero-banner {
+          padding: 80px 0;
+        }
+
+        .banner-content h1 {
+          font-size: 38px;
+        }
+
+        .banner-content p {
+          font-size: 16px;
+        }
+
+        .content-section {
+          padding: 40px 0;
+        }
+
+        .content-section h2 {
+          font-size: 30px;
+        }
+
+        .feature-item {
+          width: 70%; /* 1 item per row on smaller screens, wider for readability */
+          margin: 15px auto; /* Center individual feature items */
+        }
+
+        .product-card {
+          width: 350px; /* Make them wider to show 2 per row better */
+          margin: 15px; /* Keep margin consistent */
+        }
+
+        .tag {
+          margin: 6px; /* Reduce tag margin for tighter packing */
+          padding: 7px 12px; /* Adjust tag padding */
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        header .logo {
+          font-size: 20px;
+        }
+
+        header nav ul li {
+          margin: 0 5px;
+        }
+
+        .hero-banner {
+          padding: 60px 0;
+        }
+
+        .banner-content h1 {
+          font-size: 30px;
+        }
+
+        .product-card {
+          width: calc(100% - 30px); /* Stack cards vertically, full width minus margins */
+          margin: 15px auto; /* Center individual cards */
+        }
+
+        .feature-item {
+          width: calc(100% - 30px); /* Make features full width */
+        }
+
+        .tag {
+          margin: 5px;
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Your Logo</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-banner">
+      <div class="container">
+        <div class="banner-content">
+          <h1>Discover Our Amazing Products</h1>
+          <p>Explore a wide range of high-quality items designed to enhance your life.</p>
+          <button class="cta-button">Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Understanding the Box Model</h2>
+        <p>In CSS, every element is treated as a rectangular box. The Box Model describes how these boxes are rendered on the page, including their content, padding, border, and margin. Understanding this model is crucial for effective layout and spacing in web design. Padding is the space between the content and the border. The border is a line around the padding and content. Margin is the space outside the border, separating the element from other elements.</p>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <h3>Our Key Features</h3>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <i class="fas fa-truck feature-icon"></i>
+            <p class="feature-text">Fast Shipping</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-headset feature-icon"></i>
+            <p class="feature-text">24/7 Support</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-shield-alt feature-icon"></i>
+            <p class="feature-text">Secure Payments</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-dollar-sign feature-icon"></i>
+            <p class="feature-text">Best Prices</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-showcase">
+      <div class="container">
+        <h3>Featured Products</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1015/300/200" alt="Product 1" />
+            <h4>Product Title 1</h4>
+            <p>A short description of product 1.</p>
+            <span class="price">$29.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1025/300/200" alt="Product 2" />
+            <h4>Product Title 2</h4>
+            <p>A short description of product 2.</p>
+            <span class="price">$49.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="https://picsum.photos/id/1035/300/200" alt="Product 3" />
+            <h4>Product Title 3</h4>
+            <p>A short description of product 3.</p>
+            <span class="price">$19.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tags-section">
+      <div class="container">
+        <h3>Popular Tags</h3>
+        <div class="tag-list">
+          <span class="tag">Electronics</span>
+          <span class="tag">Apparel</span>
+          <span class="tag">Home Goods</span>
+          <span class="tag">Books</span>
+          <span class="tag">Gaming</span>
+          <span class="tag">Outdoor</span>
+          <span class="tag">Fitness</span>
+          <span class="tag">Kitchen</span>
+          <span class="tag">Beauty</span>
+          <span class="tag">Jewelry</span>
+          <span class="tag">Kids Toys</span>
+          <span class="tag">Automotive</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Box Model Showcase. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

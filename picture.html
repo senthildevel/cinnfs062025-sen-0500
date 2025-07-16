@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="yellow">
+    <h1>Media - Picture</h1>
+    <!--
+    
+       Optimized - filesize - lossy 
+
+       png - lossless -
+
+       webp - optimized and transaparent
+    -->
+
+    <img src="/images/logo_jpg.jpg" alt="" />
+
+    <hr />
+
+    <img src="/images/logo.png" alt="" />
+
+    <!-- <img src="/images/picture/large.jpg" alt="" width="100%" /> -->
+
+    <!--    
+
+     Use case 1 - Based on the device 
+      max-width : 576px  - Upto  (0 - 576px)    
+      min-width : 576px (From 576px ) and max-widht: 768px
+      
+      min-width : 769px (From 769px ) and max-widht: 1200px
+
+    Use case 2 - Same image differenct format 
+
+    -->
+
+    <picture>
+      <source srcset="/images/picture/small.jpg" media="(max-width:576px)" />
+      <source srcset="/images/picture/medium.jpg" media="(min-width:576px) and (max-width:768px)" />
+      <source srcset="/images/picture/large.jpg" media="min-width:769px" />
+
+      <img src="/images/picture/large.jpg" alt="" width="100%" />
+    </picture>
+
+    <picture>
+      <source srcset="/images/webp_image.webp" />
+      <source srcset="/images/woman.jpg" />
+      <img src="/images/woman.jpg" alt="Woman" />
+    </picture>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Table</h1>
+
+    <!--
+    
+        table 
+          tr -- table row
+           td -- table column
+        
+           Table header - th
+
+        cellspacing - outside the cell
+        cellpadding - inside the cell
+
+        rowspan - merging rows 
+        colspan - merging columns
+
+        Deprecated - 
+
+        Table strcuture 
+           Table Head = thead
+           Table Body - tbody
+           Table Footer - tfoot
+
+        caption
+
+    -->
+
+    <h2>Marklist - JOhn</h2>
+
+    <table border="1" width="80%" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr bgcolor="yellow">
+          <th></th>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td rowspan="2">Language</td>
+          <td>Tamil</td>
+          <td>80</td>
+          <td rowspan="2">A</td>
+        </tr>
+
+        <tr>
+          <td>English</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Maths</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Science</td>
+          <td>Physics</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Chemistry</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Biology</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" align="center">Higher Secondary Examination marksheet - 2023</td>
+        </tr>
+      </tfoot>
+
+      <caption>Marklist - JOhn</caption>
+    </table>
+  </body>
+</html>

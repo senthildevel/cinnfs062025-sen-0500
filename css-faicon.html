@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /> -->
+    <link rel="stylesheet" href="/lib/fa/css/all.min.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        border: 1px solid red;
+        margin-inline: auto;
+        padding-inline: 20px;
+
+        /* margin-top: 60px; */
+      }
+
+      h1 {
+        color: red;
+        font-size: 42px;
+      }
+
+      h1 i {
+        font-size: 62px;
+      }
+
+      /* ul li i {
+        color: green;
+        margin-right: 10px;
+      } */
+
+      .tech {
+        list-style: none;
+      }
+      .tech li {
+        margin-bottom: 25px;
+      }
+
+      .tech li::before {
+        /* content: "😀"; */
+        /* content: "\1F449"; */
+        /* content: "\2193"; */
+        /* font-family: "Font Awesome 6 Free"; */
+        content: "\2713";
+        color: blue;
+        margin-right: 10px;
+        /* font-weight: 800; */
+        border: 1px solid red;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: yellow;
+      }
+
+      .tech li:hover::before {
+        font-weight: 800;
+      }
+
+      .text-container p {
+        margin-bottom: 20px;
+      }
+
+      /* .text-container p::before{
+        content: ;
+       } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <i class="fa-solid fa-house-user"></i>
+        Courseinn Academy
+      </h1>
+
+      <ul class="tech">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>React</li>
+      </ul>
+
+      <div class="text-container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, repellat officiis! Temporibus natus enim qui aspernatur neque velit impedit accusantium quas expedita, dolorum facere doloremque libero maxime quibusdam, assumenda eveniet.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, repellat officiis! Temporibus natus enim qui aspernatur neque velit impedit accusantium quas expedita, dolorum facere doloremque libero maxime quibusdam, assumenda eveniet.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, repellat officiis! Temporibus natus enim qui aspernatur neque velit impedit accusantium quas expedita, dolorum facere doloremque libero maxime quibusdam, assumenda eveniet.</p>
+      </div>
+    </div>
+  </body>
+</html>

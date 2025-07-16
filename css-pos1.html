@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        /* border: 1px solid red; */
+        margin-inline: auto;
+        padding-inline: 20px;
+
+        /* margin-top: 60px; */
+      }
+      .boxes {
+        border: 2px solid red;
+        position: relative;
+        max-width: 650px;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+
+        font-size: 24px;
+        color: #fff;
+      }
+
+      .box:nth-child(1) {
+        background-color: red;
+
+        position: absolute;
+        top: 50%;
+        left: 380px;
+
+        z-index: 2;
+      }
+      .box:nth-child(2) {
+        background-color: blue;
+        position: relative;
+        top: 100px;
+        left: 350px;
+
+        z-index: 1;
+      }
+      .box:nth-child(3) {
+        background-color: yellow;
+        width: 250px;
+
+        position: relative;
+        top: 50px;
+        left: 350px;
+      }
+      .box:nth-child(4) {
+        background-color: green;
+      }
+
+      .card {
+        width: 250px;
+
+        border: 2px solid red;
+        position: relative;
+      }
+
+      .card img {
+        width: 100%;
+      }
+
+      .card .offer-badge {
+        background-color: green;
+        color: #fff;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 10px;
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+
+      <div class="card">
+        <img src="/images/bridge.jpg" alt="" />
+
+        <h2>Product title</h2>
+        <h3>2500</h3>
+
+        <span class="offer-badge">20% Off</span>
+      </div>
+    </div>
+  </body>
+</html>

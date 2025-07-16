@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table.mark_list {
+        border-collapse: collapse;
+        border: 2px solid #000;
+        width: 80%;
+      }
+
+      table.mark_list tr td {
+        border: 2px solid #000;
+      }
+
+      table.mark_list tr td,
+      table.mark_list tr th {
+        padding: 15px;
+      }
+
+      table.mark_list tfoot tr {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      table.mark_list thead tr {
+        background-color: yellow;
+      }
+
+      table.mark_list tr td:first-child {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table</h1>
+
+    <h2>Marklist - JOhn</h2>
+
+    <table class="mark_list">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td rowspan="2">Language</td>
+          <td>Tamil</td>
+          <td>80</td>
+          <td rowspan="2">A</td>
+        </tr>
+
+        <tr>
+          <td>English</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Maths</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Science</td>
+          <td>Physics</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Chemistry</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Biology</td>
+          <td>80</td>
+          <td>A</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Higher Secondary Examination marksheet - 2023</td>
+        </tr>
+      </tfoot>
+
+      <caption>Marklist - JOhn</caption>
+    </table>
+  </body>
+</html>
